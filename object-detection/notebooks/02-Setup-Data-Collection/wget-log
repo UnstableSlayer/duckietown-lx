@@ -1,0 +1,7 @@
+--2025-04-30 20:09:18--  https://duckietown-public-storage.s3.amazonaws.com/assets/mooc/2022/duckietown_object_detection_dataset.zip
+Resolving duckietown-public-storage.s3.amazonaws.com (duckietown-public-storage.s3.amazonaws.com)... 52.217.114.169, 52.217.0.180, 16.182.97.153, ...
+Connecting to duckietown-public-storage.s3.amazonaws.com (duckietown-public-storage.s3.amazonaws.com)|52.217.114.169|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 703630821 (671M) [binary/octet-stream]
+Saving to: ‘/tmp/dataset.zip’
+

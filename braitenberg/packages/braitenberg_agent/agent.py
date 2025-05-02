@@ -17,6 +17,7 @@ from aido_schemas import (
     PWMCommands,
     RGB,
 )
+import cv2
 
 from solution.connections import get_motor_left_matrix, get_motor_right_matrix
 from solution.preprocessing import preprocess
@@ -26,7 +27,7 @@ from solution.preprocessing import preprocess
 @dataclass
 class BraitenbergAgentConfig:
     gain: float = 0.9
-    const: float = 0.0
+    const: float = 0.1
 
 
 class BraitenbergAgent:
@@ -76,6 +77,8 @@ class BraitenbergAgent:
 
         # let's take only the intensity of RGB
         P = preprocess(self.rgb)
+        P = cv2.resize(P, (640//4, 480//4))
+        P = cv2.resize(P, (640, 480))
         # now we just compute the activation of our sensors
         l = float(np.sum(P * self.left))
         r = float(np.sum(P * self.right))
